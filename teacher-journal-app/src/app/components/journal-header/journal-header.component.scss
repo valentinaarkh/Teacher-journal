@@ -1,0 +1,32 @@
+.journal-header {
+    padding: 10px 0;
+    border-bottom: 5px solid #fff;
+    height: 60px;
+}
+
+.journal-header-wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.header-bookmark {
+    position: absolute;
+    margin-right: 100px;
+    left: 30px;
+    top: 15px;
+    animation: rotate 2s ease;
+}
+
+@keyframes rotate {
+    from: {
+        transform: rotateX(90deg);
+    }
+    to: {
+        transform: rotateX(0deg);
+    }
+}

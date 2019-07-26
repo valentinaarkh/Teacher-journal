@@ -1,0 +1,17 @@
+<app-journal-header></app-journal-header>
+<main class="main-content">
+    <div class="container">
+        <section class="labels-section">
+            <app-journal-button
+                *ngFor="let button of buttons"
+                class="labels-section__button"
+                [isActive]="button.isActive"
+            >
+                {{button.title}}
+            </app-journal-button>
+        </section>
+        <section class="data-section">
+            <app-students-table></app-students-table>
+        </section>
+    </div>
+</main>

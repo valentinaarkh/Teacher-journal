@@ -1,0 +1,28 @@
+html {
+    font-size: 10px;
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    height: 100%;
+    background: $main_background;
+    color: #fff;
+}
+
+html, body, ul, li, p, h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding:0 30px;
+}

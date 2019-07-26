@@ -1,0 +1,24 @@
+.journal-button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    outline-color: transparent;
+    border: none;
+    transition: all .3s ease;
+    box-sizing: border-box;
+    min-width: 100px;
+
+    // &:focus {
+    //     color: crimson;
+    //     background: silver;
+    //     font-weight: bold;
+    // }
+}
+
+.journal-button_active {
+    color: crimson;
+    background: silver;
+    font-weight: bold;
+}
