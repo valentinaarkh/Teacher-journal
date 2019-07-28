@@ -17,4 +17,6 @@ export class JournalButtonComponent implements OnInit {
       };
     }
 
+    ngOnInit() {}
+
 }

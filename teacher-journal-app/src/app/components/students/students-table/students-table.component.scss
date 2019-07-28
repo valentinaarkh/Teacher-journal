@@ -1,14 +1,16 @@
+@import 'variables';
+
 .students-table {
     border-collapse: collapse;
     width: 100%;
 }
 .table-data {
     padding: 10px;
-    border: 3px solid #fff;
+    border: 3px solid $text_color;
     text-align: center;
 }
 
 .table-heading {
     font-weight: bold;
-    background: #f08080aa;
+    background: transparentize($accent_color, .3);
 }
