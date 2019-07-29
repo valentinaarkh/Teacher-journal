@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import IButton from '../../common/entities/Button';
 
 @Component({
   selector: 'app-panel',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./panel.component.scss']
 })
 export class PanelComponent implements OnInit {
-    
+    private buttons: IButton[];
+
     constructor() {
         this.buttons = [
             {

@@ -7,6 +7,11 @@ import { JournalButtonComponent } from './shared/components/journal-button/journ
 import { JournalHeaderComponent } from './components/journal-header/journal-header.component';
 import { StudentsTableComponent } from './components/students/students-table/students-table.component';
 import { StudentsTableRowComponent } from './components/students/students-table-row/students-table-row.component';
+import { HeadingDecorationPipe } from './common/helpers/heading-decoration.pipe';
+import { HttpServiceService } from './common/services/http-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { AddButtonComponent } from './shared/components/add-button/add-button.component';
+import { AddStudentFormComponent } from './components/students/add-student-form/add-student-form.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +20,16 @@ import { StudentsTableRowComponent } from './components/students/students-table-
     JournalButtonComponent,
     JournalHeaderComponent,
     StudentsTableComponent,
-    StudentsTableRowComponent
+    StudentsTableRowComponent,
+    HeadingDecorationPipe,
+    AddButtonComponent,
+    AddStudentFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
