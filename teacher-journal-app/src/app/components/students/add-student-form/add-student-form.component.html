@@ -1,0 +1,12 @@
+<div class="add-student-wrapper">
+    <h2>Add new student</h2>
+    <form class="add-student-form">
+        <label for="heading" *ngFor="let heading of headings" class="add-student-form__label">
+            {{heading}}
+            <input type="text" id="heading" class="add-student-form__input">
+        </label>
+        <app-journal-button class="add-student__button">
+            Add
+        </app-journal-button>
+    </form>
+</div>

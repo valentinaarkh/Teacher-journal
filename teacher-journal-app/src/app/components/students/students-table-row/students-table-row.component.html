@@ -1,1 +1,10 @@
-<p>students-table-row works!</p>
+<ng-template [ngIf]="isFirst">
+    <th class="table-data" *ngFor="let item of headings">
+        {{item | headingDecoration}}
+    </th>
+</ng-template>
+<ng-template [ngIf]="!isFirst">
+    <td class="table-data" *ngFor="let item of headings">
+        {{student[item]}}
+    </td>
+</ng-template>

@@ -1,15 +1,17 @@
 @import 'variables';
 
+.students-table-section {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .students-table {
     border-collapse: collapse;
     width: 100%;
 }
-.table-data {
-    padding: 10px;
-    border: 3px solid $text_color;
-    text-align: center;
-}
-
 .table-heading {
     font-weight: bold;
     background: transparentize($accent_color, .3);

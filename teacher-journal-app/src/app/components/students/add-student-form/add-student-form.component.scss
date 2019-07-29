@@ -1,0 +1,41 @@
+@import 'variables';
+
+.add-student-form {
+    padding: 20px;
+    margin: 50px auto;
+    box-sizing: border-box;
+    width: 70%;
+    border: 2px solid $light_gray;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+
+.add-student-form__label {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-student-form__input {
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid $light_gray;
+    background: transparent;
+    border-radius: 5px;
+    outline-color: transparent;
+    color: $text_color;
+    transition: all .3s ease;
+
+    &:focus {
+        border-color: $accent_color;
+    }
+}
+
+.add-student__button {
+    display: block;
+    margin: 0 auto;
+}
