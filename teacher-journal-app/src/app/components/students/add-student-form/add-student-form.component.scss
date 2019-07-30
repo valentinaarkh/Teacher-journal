@@ -1,13 +1,23 @@
 @import 'variables';
 
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.asterisk {
+    color: $accent_color;
+}
+
 .add-student-form {
-    padding: 20px;
+    padding: 30px;
     margin: 50px auto;
     box-sizing: border-box;
     width: 70%;
     border: 2px solid $light_gray;
     border-radius: 5px;
     font-size: 2rem;
+    text-align: center;
 }
 
 .add-student-form__label {
@@ -29,9 +39,12 @@
     outline-color: transparent;
     color: $text_color;
     transition: all .3s ease;
+    font-weight: bold;
+    font-size: 2rem;
 
     &:focus {
-        border-color: $accent_color;
+        border-color: $text_color;
+        background: transparentize($text_color, 0.8);
     }
 }
 

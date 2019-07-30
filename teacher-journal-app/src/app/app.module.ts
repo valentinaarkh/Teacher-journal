@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './root/app.component';
 import { PanelComponent } from './components/panel/panel.component';
@@ -27,7 +28,8 @@ import { AddStudentFormComponent } from './components/students/add-student-form/
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [HttpServiceService],
   bootstrap: [AppComponent]

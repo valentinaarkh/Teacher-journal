@@ -1,11 +1,47 @@
 <div class="add-student-wrapper">
     <h2>Add new student</h2>
-    <form class="add-student-form">
-        <label for="heading" *ngFor="let heading of headings" class="add-student-form__label">
-            {{heading}}
-            <input type="text" id="heading" class="add-student-form__input">
+    <form class="add-student-form"
+        [formGroup]="addStudentForm"
+        (ngSubmit)="onSubmit()"
+    >
+        <label class="add-student-form__label">
+            First name
+            <span class="asterisk">*</span>
+            <input
+                type="text"
+                formControlName="firstName"
+                class="add-student-form__input"
+            >
         </label>
-        <app-journal-button class="add-student__button">
+        <label class="add-student-form__label">
+            Last name
+            <span class="asterisk">*</span>
+            <input
+                type="text"
+                formControlName="lastName"
+                class="add-student-form__input"
+            >
+        </label>
+        <label class="add-student-form__label">
+            Adress
+            <input
+                type="text"
+                formControlName="adress"
+                class="add-student-form__input"
+            >
+        </label>
+        <label class="add-student-form__label">
+            Description
+            <textarea
+                type="text"
+                formControlName="description"
+                class="add-student-form__input"
+            >
+            </textarea>
+        </label>
+        <app-journal-button
+            class="add-student__button"
+        >
             Add
         </app-journal-button>
     </form>

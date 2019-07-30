@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-student-form',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddStudentFormComponent implements OnInit {
     public headings: string[];
+    public addStudentForm = new FormGroup ({
+        firstName: new FormControl('', [
+            Validators.required
+        ]),
+        lastName: new FormControl('', [
+            Validators.required
+        ]),
+        adress: new FormControl(''),
+        description: new FormControl(''),
+    });
 
-    constructor() {
-      this.headings = ['First name', 'Last name', 'Adress', 'Description'];
+    constructor() {}
+
+    addStudent(e) {
+        console.log(e);
+    }
+
+    onSubmit() {
+        console.log('Submited', this.addStudentForm.value)
     }
 
     ngOnInit() {

@@ -13,20 +13,14 @@ export class StudentsTableComponent implements OnInit {
     public condition: boolean = true;
 
     constructor(private httpService: HttpServiceService) {
-        // this.httpService = HttpServiceService;
         this.students = [];
     }
 
     public ngOnInit(): void {
         this.httpService.getData(dataUrl)
-            .subscribe((data: IStudents[]) => {
+            .subscribe((data: IStudent[]) => {
                 this.students = data;
             });
-      // fetch('assets/data/students.json')
-      // .then((response) => response.json())
-      // .then((data) => {
-      //     this.students = data;
-      // });
     }
 
 }

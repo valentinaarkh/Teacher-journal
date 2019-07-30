@@ -30,7 +30,6 @@
       true,
       "spaces"
     ],
-    "interface-name": [true, "always-prefix"],
     "jsdoc-format": true,
     "label-position": true,
     "max-line-length": [
@@ -70,7 +69,6 @@
       "trace"
     ],
     "no-construct": true,
-    "no-parameter-properties": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
     "no-empty": true,
@@ -96,7 +94,7 @@
     ],
     "quotemark": [
       true,
-      "single",
+      "double",
       "avoid-escape"
     ],
     "radix": true,
