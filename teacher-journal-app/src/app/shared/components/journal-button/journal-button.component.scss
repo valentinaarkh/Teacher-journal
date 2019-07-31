@@ -18,6 +18,17 @@
         color: $accent_color;
         transform: scale(1.1);
     }
+
+    &:disabled {
+        transform: scale(1);
+        background: transparentize($light-gray, .6);
+        color: transparentize($text_color, .6);
+        cursor: not-allowed;
+    }
+
+    &:disabled:hover {
+        color: transparentize($text_color, .6);
+    }
 }
 
 .journal-button_active {

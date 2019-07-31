@@ -1,5 +1,7 @@
 <button class="journal-button"
         [ngClass]="isButtonActive(isActive)"
+        [disabled]="disabled"
+        [id]="id"
     >
     <ng-content></ng-content>
 </button>

@@ -6,13 +6,15 @@
                 *ngFor="let button of buttons"
                 class="labels-section__button"
                 [isActive]="button.isActive"
+                [id]="button.id"
+                (click)="switchSection($event)"
             >
                 {{button.title}}
             </app-journal-button>
         </section>
-        <section class="data-section">
-            <!-- <app-students-table></app-students-table> -->
-            <app-add-student-form></app-add-student-form>
+        <section class="data-section" [ngSwitch]="currentPanelId">
+            <app-students-table *ngSwitchCase="0"></app-students-table>
+
         </section>
     </div>
 </main>

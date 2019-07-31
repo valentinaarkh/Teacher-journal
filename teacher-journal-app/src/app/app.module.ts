@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxsModule } from '@ngxs/store';
+import {  NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { AppState } from './redux/app.state';
 
 import { AppComponent } from './root/app.component';
 import { PanelComponent } from './components/panel/panel.component';
@@ -29,7 +33,12 @@ import { AddStudentFormComponent } from './components/students/add-student-form/
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NgxsModule.forRoot([
+        AppState,
+    ]),
+    NgxsReduxDevtoolsPluginModule.forRoot(),
   ],
   providers: [HttpServiceService],
   bootstrap: [AppComponent]

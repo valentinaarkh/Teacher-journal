@@ -41,6 +41,7 @@
         </label>
         <app-journal-button
             class="add-student__button"
+            [disabled]="!addStudentForm.valid"
         >
             Add
         </app-journal-button>

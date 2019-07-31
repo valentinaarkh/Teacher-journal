@@ -9,8 +9,9 @@ import { HttpServiceService } from '../../../common/services/http-service.servic
   styleUrls: ['./students-table.component.scss']
 })
 export class StudentsTableComponent implements OnInit {
-    private students: IStudent[];
+    public students: IStudent[];
     public condition: boolean = true;
+    public isFormVisible: boolean = false;
 
     constructor(private httpService: HttpServiceService) {
         this.students = [];
@@ -21,6 +22,11 @@ export class StudentsTableComponent implements OnInit {
             .subscribe((data: IStudent[]) => {
                 this.students = data;
             });
+    }
+
+    public toggleStudentForm(): void {
+        console.log('click');
+        this.isFormVisible = !this.isFormVisible;
     }
 
 }

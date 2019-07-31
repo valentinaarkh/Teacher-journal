@@ -1,13 +1,5 @@
 @import 'variables';
 
-.students-table-section {
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .students-table {
     border-collapse: collapse;
     width: 100%;
@@ -15,4 +7,12 @@
 .table-heading {
     font-weight: bold;
     background: transparentize($accent_color, .3);
+}
+
+.student-table__wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

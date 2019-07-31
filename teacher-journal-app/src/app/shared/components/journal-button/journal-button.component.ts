@@ -7,7 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class JournalButtonComponent implements OnInit {
 
-    @Input() private isActive: boolean;
+    @Input() public isActive: boolean;
+    @Input() public disabled: boolean;
+    @Input() public id: number;
 
     constructor() { }
 

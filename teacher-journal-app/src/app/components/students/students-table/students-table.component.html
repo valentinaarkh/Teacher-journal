@@ -1,21 +1,27 @@
 <section class="students-table-section">
-    <table class="students-table">
-        <thead>
-            <tr class="table-row table-heading"
-                app-students-table-row
-                [student]="students[0]"
-                [isFirst]="condition"
-                 >
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="table-row"
-                *ngFor="let student of students"
-                 app-students-table-row [student]="student"
-                 [isFirst]="!condition"
-            >
-            </tr>
-        </tbody>
-    </table>
-    <app-add-button></app-add-button>
+    <div class="student-table__wrapper" *ngIf="!isFormVisible">
+        <table class="students-table">
+            <thead>
+                <tr class="table-row table-heading"
+                    app-students-table-row
+                    [student]="students[0]"
+                    [isFirst]="condition"
+                     >
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-row"
+                    *ngFor="let student of students"
+                     app-students-table-row [student]="student"
+                     [isFirst]="!condition"
+                >
+                </tr>
+            </tbody>
+        </table>
+        <app-add-button (click)="toggleStudentForm()"></app-add-button>
+    </div>
+    <app-add-student-form
+        *ngIf="isFormVisible"
+        (toggleStudentForm)="toggleStudentForm()"
+    ></app-add-student-form>
 </section>
